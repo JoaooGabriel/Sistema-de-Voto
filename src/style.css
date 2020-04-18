@@ -1,0 +1,35 @@
+body {
+    background: rgb(15, 13, 141);
+    font-family: Roboto, sans-serif;
+}
+
+footer {
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+.container {
+    text-align: center;
+    background: center;
+    background-color: #fff;
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    border: #000 solid 1px;
+    margin: 100px auto;
+    padding-bottom: 10px;
+}
+
+.pais {
+    border-radius: 5px;
+    height: 25px;
+}
+
+#confirm {
+    border-radius: 5px;
+    height: 30px;
+    border: #fff;
+    background-color: green;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+}
