@@ -1,8 +1,17 @@
-function buttonOver() {
-    let button = document.querySelector('#confirm');
+ function buttonOver() {
+   let button = document.querySelector('.confirm');
 
-    button.style.cursor = 'pointer';
+   button.style.cursor = 'pointer';
 };
+
+function buttonContinue() {
+    document.querySelector('.escolher').style = 'display: block';
+};
+
+function buttonReturn() {
+    sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
+    window.location.reload(); //atualiza a page
+}; //Recarrega a pagina
 
 function currentAge(birthYear, birthMounth, birthDay) {
     var day = new Date;
@@ -43,5 +52,5 @@ function maiorIdade() {
 
     var age = birth.value;
     var array =  age.split('-');
-    alert(currentAge(array[0], array[1], array[2]));
+    console.log(currentAge(array[0], array[1], array[2]));
 };

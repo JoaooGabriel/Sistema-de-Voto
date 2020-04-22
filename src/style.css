@@ -8,11 +8,16 @@ footer {
     margin-top: 30px;
 }
 
+img {
+    height: 150px;
+    width: 150px;
+}
+
 .container {
     text-align: center;
     background: center;
     background-color: #fff;
-    width: 600px;
+    width: 700px;
     height: auto;
     border-radius: 10px;
     border: #000 solid 1px;
@@ -25,7 +30,7 @@ footer {
     height: 25px;
 }
 
-#confirm {
+.confirm {
     border-radius: 5px;
     height: 30px;
     border: #fff;
@@ -34,18 +39,71 @@ footer {
     font-family: Roboto, sans-serif;
 }
 
+.continue {
+    border-radius: 5px;
+    height: 30px;
+    border: #fff;
+    background-color: green;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+}
+
+.return {
+    border-radius: 5px;
+    height: 30px;
+    border: #fff;
+    background-color: darkgrey;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
+}
+
+.escolher {
+    display: none;
+}
+
 #minor {
     display: none;
+}
+
+#minor img{
+    margin-top: 10px;
+    border: #000 solid 1px;
+    border-radius: 4px;
 }
 
 #older {
     display: none;
 }
 
+#older p {
+    font-size: 18px;
+    font-weight: 600; 
+}
+
+#older img {
+    cursor: pointer;
+    border: #000 solid 1px;
+    border-radius: 4px;
+}
+
 #optional {
     display: none;
 }
 
+#optional img {
+    cursor: pointer;
+    border: #000 solid 1px;
+    border-radius: 4px;
+}
+
 #oldAll {
     display: none;
+}
+
+#oldAll img {
+    margin-top: 10px;
+    border: #000 solid 1px;
+    border-radius: 4px;
 }

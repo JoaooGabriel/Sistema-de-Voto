@@ -24,27 +24,74 @@
             </p>
 
             <input type="date" class="pais" placeholder="Digite seu país">
-            <button id="confirm" onmouseover="buttonOver()" onclick="maiorIdade()">
+            <button class="confirm" onmouseover="buttonOver()" onclick="maiorIdade()">
                 Confirmar
             </button>
             <div id="moreInfo">
                 <div id="minor">
-                    <p>Sua idade é menor que 18</p>
+
+                    <div>
+                        <img src="./assets/adolescente.jpg" alt="Adolescentes" class="adolescentes">
+                    </div>
+
+                    <p>Sua idade é menor que 16. Infelizmente você não pode votar, obrigado pela participação!</p>
+
+                    <button class="return" onclick="buttonReturn()">
+                        Voltar
+                    </button>
                 </div>
 
                 <div id="oldAll">
-                    <p>Sua idade é maior que 67</p>
+                    
+                    <div>
+                        <img src="./assets/senhores.jpg" alt="Senhores" class="senhores">
+                    </div>
+
+                    <p>Sua idade é maior que 67. Infelizmente você não pode votar, obrigado pela participação!</p>
+
+                    <button class="return" onclick="buttonReturn()">
+                        Voltar
+                    </button>
                 </div>
 
                 <div id="optional">
                     <p>Voto opcional, deseja continuar ?</p>
-                    <button>Continuar</button>
+                    <button class="continue" onclick="buttonContinue()">Continuar</button>
+
+                    <div class="escolher">
+                        <p>
+                            Escolha para quem irá votar:
+                        </p>
+                            <img src="./assets/presidente.jpg" alt="Presidente" class="president">
+                            <!-- Presidente -->
+                            
+                            <img src="./assets/prefeito.jpeg" alt="Prefeito" class="mayor">
+                            <!-- Prefeito -->
+                            
+                            <img src="./assets/governador.jpeg" alt="Governador" class="governor">
+                            <!-- Governador -->
+                            
+                            <img src="./assets/vereador.jpg" alt="Vereador" class="councilor">
+                            <!-- Vereador -->
+                    </div>
                 </div>
 
                 <div id="older">
-                    <p>Escolha para quem irá votar:</p>
-                </div>
-                
+                    <p>
+                        Escolha para quem irá votar:
+                    </p>
+                        <img src="./assets/presidente.jpg" alt="Presidente" class="president">
+                        <!-- Presidente -->
+                        
+                        <img src="./assets/prefeito.jpeg" alt="Prefeito" class="mayor">
+                        <!-- Prefeito -->
+                        
+                        <img src="./assets/governador.jpeg" alt="Governador" class="governor">
+                        <!-- Governador -->
+                        
+                        <img src="./assets/vereador.jpg" alt="Vereador" class="councilor">
+                        <!-- Vereador -->
+                </div>               
             </div>
         </section>
         
