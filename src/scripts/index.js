@@ -8,10 +8,18 @@ function buttonContinue() {
     document.querySelector('.escolher').style = 'display: block';
 };
 
+function appearUrna() {
+    document.querySelector('.aparecer').style = 'display: block';
+    document.querySelector('.aparecer1').style = 'display: block';
+    // document.querySelector('.older').classList.toggle('.aparecer');
+}
+
+
 function buttonReturn() {
     sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
     window.location.reload(); //atualiza a page
 }; //Recarrega a pagina
+
 
 function currentAge(birthYear, birthMounth, birthDay) {
     var day = new Date;

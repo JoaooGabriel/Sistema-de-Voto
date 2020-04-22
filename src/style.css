@@ -76,8 +76,15 @@ button {
     display: none;
 }
 
+.aparecer {
+    display: none;
+}
+
+.aparecer1 {
+    display: none;
+}
+
 .urna {
-    /* display: none; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: #000 solid 2px;
