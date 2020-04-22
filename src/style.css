@@ -33,3 +33,19 @@ footer {
     color: #fff;
     font-family: Roboto, sans-serif;
 }
+
+#minor {
+    display: none;
+}
+
+#older {
+    display: none;
+}
+
+#optional {
+    display: none;
+}
+
+#oldAll {
+    display: none;
+}
