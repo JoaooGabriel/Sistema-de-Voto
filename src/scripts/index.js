@@ -6,14 +6,48 @@
 
 function buttonContinue() {
     document.querySelector('.escolher').style = 'display: block';
+    document.querySelector('.escolher1').style = 'display: block';
 };
 
 function appearUrna() {
     document.querySelector('.aparecer').style = 'display: block';
     document.querySelector('.aparecer1').style = 'display: block';
+    document.querySelector('.aparecer2').style = 'display: block';
     // document.querySelector('.older').classList.toggle('.aparecer');
-}
+};
 
+// function apperTela() {
+//     let displayUrna = document.querySelector('.tela');
+//     let addNumber = document.querySelector('.teclado');
+//     switch(addNumber) {
+//         case '1':
+//         case '2':
+//         case '3':
+//         case '4':
+//         case '5':
+//         case '6':
+//         case '7':
+//         case '8':
+//         case '9':
+//         case '0':
+//             addNumber.write(parseInt(value));
+//         break;
+//         case 'confirma':
+//             document.querySelector('.finaly').style = 'display: block';
+//             console.log();
+//         break;
+//         case 'corrige':
+
+//         break;
+//         case 'branco':
+//             displayUrna.write('Voto em branco, confirma');
+//         break;
+
+//         default:
+//             alert('Erro.');
+//         break;
+//     };
+// };
 
 function buttonReturn() {
     sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
@@ -61,4 +95,6 @@ function maiorIdade() {
     var age = birth.value;
     var array =  age.split('-');
     console.log(currentAge(array[0], array[1], array[2]));
+
+    document.querySelector('#birth').style = 'display: none';
 };

@@ -76,11 +76,19 @@ button {
     display: none;
 }
 
+.escolher1 {
+    display: none;
+}
+
 .aparecer {
     display: none;
 }
 
 .aparecer1 {
+    display: none;
+}
+
+.aparecer2 {
     display: none;
 }
 
@@ -141,6 +149,14 @@ button {
     font-weight: 600;
 }
 
+.finaly {
+    display: none;
+}
+
+#birth {
+    display: block;
+}
+
 #minor {
     display: none;
 }
@@ -184,4 +200,8 @@ button {
     margin-top: 10px;
     border: #000 solid 1px;
     border-radius: 4px;
+}
+
+#oldAll .escolher img {
+    cursor: pointer;
 }
