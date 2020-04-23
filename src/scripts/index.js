@@ -5,7 +5,9 @@
 };
 
 function buttonContinue() {
-    document.querySelector('.escolher').style = 'display: block';
+    document.querySelectorAll('.escolher').style = 'display: block';;
+    // btnecolhe.style = 'display: block';
+    // console.log(btnecolhe);
     document.querySelector('.escolher1').style = 'display: block';
 };
 
@@ -16,38 +18,38 @@ function appearUrna() {
     // document.querySelector('.older').classList.toggle('.aparecer');
 };
 
-// function apperTela() {
-//     let displayUrna = document.querySelector('.tela');
-//     let addNumber = document.querySelector('.teclado');
-//     switch(addNumber) {
-//         case '1':
-//         case '2':
-//         case '3':
-//         case '4':
-//         case '5':
-//         case '6':
-//         case '7':
-//         case '8':
-//         case '9':
-//         case '0':
-//             addNumber.write(parseInt(value));
-//         break;
-//         case 'confirma':
-//             document.querySelector('.finaly').style = 'display: block';
-//             console.log();
-//         break;
-//         case 'corrige':
+//  function apperTela() {
+//      let displayUrna = document.querySelector('.tela').innerHTML;
+//      let addNumber = document.querySelector('.teclado');
+//      switch(displayUrna) {
+//          case '1':
+//          case '2':
+//          case '3':
+//          case '4':
+//          case '5':
+//          case '6':
+//          case '7':
+//          case '8':
+//          case '9':
+//          case '0':
+//              document.write(addNumber());
+//          break;
+//          case 'confirma':
+//              document.querySelector('.finaly').style = 'display: block';
+//              console.log();
+//          break;
+//          case 'corrige':
 
-//         break;
-//         case 'branco':
-//             displayUrna.write('Voto em branco, confirma');
-//         break;
+//          break;
+//          case 'branco':
+//              displayUrna.write('Voto em branco, confirma');
+//          break;
 
-//         default:
-//             alert('Erro.');
-//         break;
-//     };
-// };
+//          default:
+//              alert('Erro.');
+//          break;
+//      };
+//  };
 
 function buttonReturn() {
     sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
@@ -79,7 +81,7 @@ function currentAge(birthYear, birthMounth, birthDay) {
          document.getElementById('optional').style = 'display: block';
      } else if (current_age < 18) {
         document.getElementById('minor').style = 'display: block';
-     } else if(current_age > 67) {
+     } else if(current_age > 70) {
         document.getElementById('oldAll').style = 'display: block';
      } else {
         document.getElementById('older').style = 'display: block';
