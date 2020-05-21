@@ -34,9 +34,17 @@ button {
     padding-bottom: 10px;
 }
 
-.pais {
-    border-radius: 5px;
-    height: 25px;
+.nascimento {
+    border: rgb(136, 135, 135) 2px solid;
+    border-radius: 4px;
+    height: 28px;
+    text-align: center;
+    /* border: 0;
+    border-bottom: rgb(136, 135, 135) 2px solid;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+    font-size: 17px; */
 }
 
 .confirm {
@@ -48,6 +56,7 @@ button {
     color: #fff;
     font-family: Roboto, sans-serif;
     font-weight: 100;
+    margin-left: 10px;
 }
 
 .continue {

@@ -1,55 +1,54 @@
  function buttonOver() {
    let button = document.querySelector('.confirm');
-
    button.style.cursor = 'pointer';
 };
 
 function buttonContinue() {
-    document.querySelectorAll('.escolher').style = 'display: block';;
-    // btnecolhe.style = 'display: block';
-    // console.log(btnecolhe);
+    document.querySelector('.escolher').style = 'display: block';
     document.querySelector('.escolher1').style = 'display: block';
 };
 
 function appearUrna() {
     document.querySelector('.aparecer').style = 'display: block';
-    document.querySelector('.aparecer1').style = 'display: block';
-    document.querySelector('.aparecer2').style = 'display: block';
-    // document.querySelector('.older').classList.toggle('.aparecer');
 };
 
-//  function apperTela() {
-//      let displayUrna = document.querySelector('.tela').innerHTML;
-//      let addNumber = document.querySelector('.teclado');
-//      switch(displayUrna) {
-//          case '1':
-//          case '2':
-//          case '3':
-//          case '4':
-//          case '5':
-//          case '6':
-//          case '7':
-//          case '8':
-//          case '9':
-//          case '0':
-//              document.write(addNumber());
-//          break;
-//          case 'confirma':
-//              document.querySelector('.finaly').style = 'display: block';
-//              console.log();
-//          break;
-//          case 'corrige':
+function apperTela(element) {
+    console.log('entrou');
+    console.log(element);
+     let valorBotao = element.innerText;
+     if(isNaN(valorBotao)) {
+        switch(valorBotao) {
+            case 'Confirma':
+                alert('Confirma');
+            break;
+            case 'Corrige':
+                alert('Corrigir');
+            break;
+            case 'Branco':
+                escreverNaTela(valorBotao);
+            break;
+            default:
+                alert('Erro.');
+            break;
+        };
+    } else
+        escreverNaTela(valorBotao);
+ };
+ 
+function confirmar(){
+     alert('confirmado')
+    // document.querySelector('.finaly').style = 'display: block';
+    console.log();
+}; 
 
-//          break;
-//          case 'branco':
-//              displayUrna.write('Voto em branco, confirma');
-//          break;
-
-//          default:
-//              alert('Erro.');
-//          break;
-//      };
-//  };
+function escreverNaTela(valor) {
+    console.log('áaaa')
+    let displayUrnas = document.querySelectorAll('.tela');
+    for (let index = 0; index < displayUrnas.length; index++) {
+        const displayUrna = displayUrnas[index];
+        displayUrna.insertAdjacentHTML('beforeend', `<label>${valor}</label>`);
+    };
+};
 
 function buttonReturn() {
     sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
@@ -84,15 +83,29 @@ function currentAge(birthYear, birthMounth, birthDay) {
      } else if(current_age > 70) {
         document.getElementById('oldAll').style = 'display: block';
      } else {
-        document.getElementById('older').style = 'display: block';
+        mostraCandidatos();
      };
 
     return current_age < 0 ? 0 : current_age;
 };
 
+function mostraCandidatos(){
+    let elementosContinue = document.querySelectorAll('.optionalVote');
+    //forEach vai percorrer cada elemento do elementos continue
+    elementosContinue.forEach(element => {
+        element.style = 'display: none';
+    });
+    //Mesma coisa de cima com o for
+    // for (let index = 0; index < elementosContinue.length; index++) {
+    //     const element = elementosContinue[index];
+        
+    // }
+    document.getElementById('older').style = 'display: block';
+};
+
 function maiorIdade() {
 
-    var birth = document.querySelector('.pais');
+    var birth = document.querySelector('.nascimento');
 
     var age = birth.value;
     var array =  age.split('-');

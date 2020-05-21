@@ -16,7 +16,7 @@
 
     <div class="container">
         <header>
-            <h2>Bem-Vindo ao Sistema de Voto de São Paulo !</h2>
+            <h2>Bem-Vindo ao Sistema de Voto de São Paulo</h2>
         </header>
 
         <section class="conteudo">
@@ -25,7 +25,12 @@
                     Digite sua data de nascimento: 
                 </p>
     
-                <input type="date" class="pais" placeholder="Digite seu país">
+                <input type="date" class="nascimento" placeholder="Data de nascimento" required>
+                <!-- <label for="">/</label>
+                <input type="number" class="nascimento" placeholder="MM" maxlength="2" required>
+                <label for="">/</label>
+                <input type="number" class="nascimento" placeholder="YYYY" maxlength="4" required> -->
+
                 <button class="confirm" onmouseover="buttonOver()" onclick="maiorIdade()">
                     Confirmar
                 </button>
@@ -45,127 +50,27 @@
                     </button>
                 </div>
 
-                <div id="oldAll">
+                <div id="oldAll" class='optionalVote'>
                     
                     <div>
                         <img src="./assets/senhores.jpg" alt="Senhores" class="senhores">
                     </div>
 
                     <p>Sua idade é maior que 70. Voto opcional, deseja continuar ?</p>
-                    <button class="continue" onclick="buttonContinue()">Continuar</button>
-
-                    <div class="escolher">
-                        <p>
-                            Escolha para quem irá votar:
-                        </p>
-                            <img src="./assets/presidente.jpg" alt="Presidente" class="president" onclick="appearUrna()">
-                            <!-- Presidente -->
-                            
-                            <img src="./assets/prefeito.jpeg" alt="Prefeito" class="mayor" onclick="appearUrna()">
-                            <!-- Prefeito -->
-                            
-                            <img src="./assets/governador.jpeg" alt="Governador" class="governor" onclick="appearUrna()">
-                            <!-- Governador -->
-                            
-                            <img src="./assets/vereador.jpg" alt="Vereador" class="councilor" onclick="appearUrna()">
-                            <!-- Vereador -->
-                    </div>
-                    <div class="aparecer">
-                        <div class="urna">
-                            <div class="tela">
-                                
-                            </div>
-                            <div class="teclado">
-                                <div>
-                                    <button class="1">1</button>
-                                    <button class="2">2</button>
-                                    <button class="3">3</button>
-                                </div>
-                                <div>
-                                    <button class="4">4</button>
-                                    <button class="5">5</button>
-                                    <button class="6">6</button>
-                                </div>
-                                <div>
-                                    <button class="7">7</button>
-                                    <button class="8">8</button>
-                                    <button class="9">9</button>
-                                </div>
-                                <div>
-                                    <button class="0">0</button>
-                                </div>
-                                <div>
-                                    <button class="cancelUrna">Branco</button>
-                                    <button class="correctUrna">Corrige</button>
-                                    <button class="confirmUrna">Confirma</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="finaly">
-                        Obrigado pela participa!
-                    </div>
+                    <button class="continue" onclick="mostraCandidatos()">Continuar</button>
 
                     <button class="return" onclick="buttonReturn()">
                         Voltar
                     </button>
                 </div>
 
-                <div id="optional">
+                <div id="optional" class='optionalVote'>
+                    <div>
+                        <img src="./assets/adolescente.jpg" alt="Adolescentes" class="adolescentes">
+                    </div>
+                    
                     <p>Voto opcional, deseja continuar ?</p>
-                    <button class="continue" onclick="buttonContinue()">Continuar</button>
-
-                    <div class="escolher1">
-                        <p>
-                            Escolha para quem irá votar:
-                        </p>
-                            <img src="./assets/presidente.jpg" alt="Presidente" class="president" onclick="appearUrna()">
-                            <!-- Presidente -->
-                            
-                            <img src="./assets/prefeito.jpeg" alt="Prefeito" class="mayor" onclick="appearUrna()">
-                            <!-- Prefeito -->
-                            
-                            <img src="./assets/governador.jpeg" alt="Governador" class="governor" onclick="appearUrna()">
-                            <!-- Governador -->
-                            
-                            <img src="./assets/vereador.jpg" alt="Vereador" class="councilor" onclick="appearUrna()">
-                            <!-- Vereador -->
-                    </div>
-                    <div class="aparecer1">
-                        <div class="urna">
-                            <div class="tela">
-                                
-                            </div>
-                            <div class="teclado">
-                                <div>
-                                    <button class="1">1</button>
-                                    <button class="2">2</button>
-                                    <button class="3">3</button>
-                                </div>
-                                <div>
-                                    <button class="4">4</button>
-                                    <button class="5">5</button>
-                                    <button class="6">6</button>
-                                </div>
-                                <div>
-                                    <button class="7">7</button>
-                                    <button class="8">8</button>
-                                    <button class="9">9</button>
-                                </div>
-                                <div>
-                                    <button class="0">0</button>
-                                </div>
-                                <div>
-                                    <button class="cancelUrna">Branco</button>
-                                    <button class="correctUrna">Corrige</button>
-                                    <button class="confirmUrna">Confirma</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="finaly">
-                        Obrigado pela participa!
-                    </div>
+                    <button class="continue" onclick="mostraCandidatos()">Continuar</button>
 
                     <button class="return" onclick="buttonReturn()">
                         Voltar
@@ -190,34 +95,34 @@
                             <img src="./assets/vereador.jpg" alt="Vereador" class="councilor" onclick="appearUrna()">
                             <!-- Vereador -->
                     </div>
-                    <div class="aparecer2">
+                    <div class="aparecer">
                         <div class="urna">
-                            <div class="tela">
+                            <div id="tela3" class="tela">
                                 
                             </div>
                             <div class="teclado">
                                 <div>
-                                    <button class="1">1</button>
-                                    <button class="2">2</button>
-                                    <button class="3">3</button>
+                                    <button class="1" onclick="apperTela(this)">1</button>
+                                    <button class="2" onclick="apperTela(this)">2</button>
+                                    <button class="3" onclick="apperTela(this)">3</button>
                                 </div>
                                 <div>
-                                    <button class="4">4</button>
-                                    <button class="5">5</button>
-                                    <button class="6">6</button>
+                                    <button class="4" onclick="apperTela(this)">4</button>
+                                    <button class="5" onclick="apperTela(this)">5</button>
+                                    <button class="6" onclick="apperTela(this)">6</button>
                                 </div>
                                 <div>
-                                    <button class="7">7</button>
-                                    <button class="8">8</button>
-                                    <button class="9">9</button>
+                                    <button class="7" onclick="apperTela(this)">7</button>
+                                    <button class="8" onclick="apperTela(this)">8</button>
+                                    <button class="9" onclick="apperTela(this)">9</button>
                                 </div>
                                 <div>
-                                    <button class="0">0</button>
+                                    <button class="0" onclick="apperTela(this)">0</button>
                                 </div>
                                 <div>
-                                    <button class="cancelUrna" onclick="apperTela()">Branco</button>
-                                    <button class="correctUrna" onclick="apperTela()">Corrige</button>
-                                    <button class="confirmUrna" onclick="apperTela()">Confirma</button>
+                                    <button class="cancelUrna" onclick="apperTela(this)">Branco</button>
+                                    <button class="correctUrna" onclick="apperTela(this)">Corrige</button>
+                                    <button class="confirmUrna" onclick="apperTela(this)">Confirma</button>
                                 </div>
                             </div>
                         </div>
