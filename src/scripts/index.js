@@ -35,11 +35,11 @@ function apperTela(element) {
         escreverNaTela(valorBotao);
  };
  
-function confirmar(){
-     alert('confirmado')
-    // document.querySelector('.finaly').style = 'display: block';
-    console.log();
-}; 
+// function confirmar(){
+//      alert('confirmado')
+//     // document.querySelector('.finaly').style = 'display: block';
+//     console.log();
+// }; 
 
 function escreverNaTela(valor) {
     console.log('áaaa')
@@ -64,11 +64,11 @@ function currentAge(birthYear, birthMounth, birthDay) {
     // console.log(birthMounth);
     
     let currentDay = day.getDate();
-    let currentMounth = day.getMonth();
+    let currentMounth = day.getMonth()+1;
     let currentYear = day.getFullYear();
-    // console.log(currentDay);
-    // console.log(currentMounth);
-    // console.log(currentYear);
+    //console.log(currentDay);
+    //console.log(currentMounth);
+    //console.log(currentYear);
     
     var current_age = currentYear - birthYear;
 
