@@ -10,19 +10,25 @@ function buttonContinue() {
 
 function appearUrna() {
     document.querySelector('.aparecer').style = 'display: block';
+    document.querySelector('.mostraImg').style = 'display: none';
 };
 
 function apperTela(element) {
-    console.log('entrou');
+    //console.log('Passou');
     console.log(element);
      let valorBotao = element.innerText;
+     
      if(isNaN(valorBotao)) {
         switch(valorBotao) {
             case 'Confirma':
+                document.querySelector('.finaly').style = 'display: block';
+                document.querySelector('.aparecer').style = 'display: none';
                 alert('Confirma');
             break;
             case 'Corrige':
-                alert('Corrigir');
+                let limpaNumero = document.getElementById('conteudoTela');
+                limpaNumero.innerHTML="";
+                //alert('Corrigir');
             break;
             case 'Branco':
                 escreverNaTela(valorBotao);
@@ -42,8 +48,8 @@ function apperTela(element) {
 // }; 
 
 function escreverNaTela(valor) {
-    console.log('áaaa')
-    let displayUrnas = document.querySelectorAll('.tela');
+    //console.log('Passou')
+    let displayUrnas = document.querySelectorAll('#conteudoTela');
     for (let index = 0; index < displayUrnas.length; index++) {
         const displayUrna = displayUrnas[index];
         displayUrna.insertAdjacentHTML('beforeend', `<label>${valor}</label>`);

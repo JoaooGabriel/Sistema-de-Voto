@@ -85,19 +85,7 @@ button {
     display: none;
 }
 
-.escolher1 {
-    display: none;
-}
-
 .aparecer {
-    display: none;
-}
-
-.aparecer1 {
-    display: none;
-}
-
-.aparecer2 {
     display: none;
 }
 
@@ -114,6 +102,9 @@ button {
     border-radius: 4px;
     margin: 5px;
     background-color: rgb(184, 184, 184);
+}
+.tela label{
+    font-size: 98px;
 }
 
 .teclado {
@@ -160,6 +151,8 @@ button {
 
 .finaly {
     display: none;
+    margin: 20px;
+    font-size: 20px;
 }
 
 #birth {
@@ -213,4 +206,8 @@ button {
 
 #oldAll .escolher img {
     cursor: pointer;
+}
+
+#conteudoTela {
+    padding-top: 20px;
 }
