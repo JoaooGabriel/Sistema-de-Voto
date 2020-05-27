@@ -1,6 +1,5 @@
  function buttonOver() {
    let button = document.querySelector('.confirm');
-
    button.style.cursor = 'pointer';
 };
 
@@ -11,43 +10,51 @@ function buttonContinue() {
 
 function appearUrna() {
     document.querySelector('.aparecer').style = 'display: block';
-    document.querySelector('.aparecer1').style = 'display: block';
-    document.querySelector('.aparecer2').style = 'display: block';
-    // document.querySelector('.older').classList.toggle('.aparecer');
+    document.querySelector('.mostraImg').style = 'display: none';
 };
 
-// function apperTela() {
-//     let displayUrna = document.querySelector('.tela');
-//     let addNumber = document.querySelector('.teclado');
-//     switch(addNumber) {
-//         case '1':
-//         case '2':
-//         case '3':
-//         case '4':
-//         case '5':
-//         case '6':
-//         case '7':
-//         case '8':
-//         case '9':
-//         case '0':
-//             addNumber.write(parseInt(value));
-//         break;
-//         case 'confirma':
-//             document.querySelector('.finaly').style = 'display: block';
-//             console.log();
-//         break;
-//         case 'corrige':
+function apperTela(element) {
+    //console.log('Passou');
+    console.log(element);
+     let valorBotao = element.innerText;
+     
+     if(isNaN(valorBotao)) {
+        switch(valorBotao) {
+            case 'Confirma':
+                document.querySelector('.finaly').style = 'display: block';
+                document.querySelector('.aparecer').style = 'display: none';
+                alert('Confirma');
+            break;
+            case 'Corrige':
+                let limpaNumero = document.getElementById('conteudoTela');
+                limpaNumero.innerHTML="";
+                //alert('Corrigir');
+            break;
+            case 'Branco':
+                escreverNaTela(valorBotao);
+            break;
+            default:
+                alert('Erro.');
+            break;
+        };
+    } else
+        escreverNaTela(valorBotao);
+ };
+ 
+// function confirmar(){
+//      alert('confirmado')
+//     // document.querySelector('.finaly').style = 'display: block';
+//     console.log();
+// }; 
 
-//         break;
-//         case 'branco':
-//             displayUrna.write('Voto em branco, confirma');
-//         break;
-
-//         default:
-//             alert('Erro.');
-//         break;
-//     };
-// };
+function escreverNaTela(valor) {
+    //console.log('Passou')
+    let displayUrnas = document.querySelectorAll('#conteudoTela');
+    for (let index = 0; index < displayUrnas.length; index++) {
+        const displayUrna = displayUrnas[index];
+        displayUrna.insertAdjacentHTML('beforeend', `<label>${valor}</label>`);
+    };
+};
 
 function buttonReturn() {
     sessionStorage.setItem('recarregou', 'treue'); //seta uma var no Storage como true
@@ -63,11 +70,11 @@ function currentAge(birthYear, birthMounth, birthDay) {
     // console.log(birthMounth);
     
     let currentDay = day.getDate();
-    let currentMounth = day.getMonth();
+    let currentMounth = day.getMonth()+1;
     let currentYear = day.getFullYear();
-    // console.log(currentDay);
-    // console.log(currentMounth);
-    // console.log(currentYear);
+    //console.log(currentDay);
+    //console.log(currentMounth);
+    //console.log(currentYear);
     
     var current_age = currentYear - birthYear;
 
@@ -79,18 +86,32 @@ function currentAge(birthYear, birthMounth, birthDay) {
          document.getElementById('optional').style = 'display: block';
      } else if (current_age < 18) {
         document.getElementById('minor').style = 'display: block';
-     } else if(current_age > 67) {
+     } else if(current_age > 70) {
         document.getElementById('oldAll').style = 'display: block';
      } else {
-        document.getElementById('older').style = 'display: block';
+        mostraCandidatos();
      };
 
     return current_age < 0 ? 0 : current_age;
 };
 
+function mostraCandidatos(){
+    let elementosContinue = document.querySelectorAll('.optionalVote');
+    //forEach vai percorrer cada elemento do elementos continue
+    elementosContinue.forEach(element => {
+        element.style = 'display: none';
+    });
+    //Mesma coisa de cima com o for
+    // for (let index = 0; index < elementosContinue.length; index++) {
+    //     const element = elementosContinue[index];
+        
+    // }
+    document.getElementById('older').style = 'display: block';
+};
+
 function maiorIdade() {
 
-    var birth = document.querySelector('.pais');
+    var birth = document.querySelector('.nascimento');
 
     var age = birth.value;
     var array =  age.split('-');

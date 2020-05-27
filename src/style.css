@@ -34,9 +34,17 @@ button {
     padding-bottom: 10px;
 }
 
-.pais {
-    border-radius: 5px;
-    height: 25px;
+.nascimento {
+    border: rgb(136, 135, 135) 2px solid;
+    border-radius: 4px;
+    height: 28px;
+    text-align: center;
+    /* border: 0;
+    border-bottom: rgb(136, 135, 135) 2px solid;
+    text-align: center;
+    width: 60px;
+    text-decoration: none;
+    font-size: 17px; */
 }
 
 .confirm {
@@ -48,6 +56,7 @@ button {
     color: #fff;
     font-family: Roboto, sans-serif;
     font-weight: 100;
+    margin-left: 10px;
 }
 
 .continue {
@@ -76,19 +85,7 @@ button {
     display: none;
 }
 
-.escolher1 {
-    display: none;
-}
-
 .aparecer {
-    display: none;
-}
-
-.aparecer1 {
-    display: none;
-}
-
-.aparecer2 {
     display: none;
 }
 
@@ -105,6 +102,9 @@ button {
     border-radius: 4px;
     margin: 5px;
     background-color: rgb(184, 184, 184);
+}
+.tela label{
+    font-size: 98px;
 }
 
 .teclado {
@@ -151,6 +151,8 @@ button {
 
 .finaly {
     display: none;
+    margin: 20px;
+    font-size: 20px;
 }
 
 #birth {
@@ -204,4 +206,8 @@ button {
 
 #oldAll .escolher img {
     cursor: pointer;
+}
+
+#conteudoTela {
+    padding-top: 20px;
 }
