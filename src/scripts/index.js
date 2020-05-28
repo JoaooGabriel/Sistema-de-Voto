@@ -22,7 +22,8 @@ function apperTela(element) {
         switch(valorBotao) {
             case 'Confirma':
                 document.querySelector('.finaly').style = 'display: block';
-                document.querySelector('.aparecer').style = 'display: none';
+                document.querySelector('.aparecer').style = 'display: none';                
+                console.log(valueVoto());
                 alert('Confirma');
             break;
             case 'Corrige':
@@ -30,7 +31,7 @@ function apperTela(element) {
                 limpaNumero.innerHTML="";
                 //alert('Corrigir');
             break;
-            case 'Branco':
+            case 'Nulo':
                 escreverNaTela(valorBotao);
             break;
             default:
@@ -119,3 +120,8 @@ function maiorIdade() {
 
     document.querySelector('#birth').style = 'display: none';
 };
+
+function valueVoto() {
+    let valueTela = document.querySelector('.tela');
+    valueTela.value;
+}

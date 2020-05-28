@@ -26,12 +26,20 @@ button {
     text-align: center;
     background: center;
     background-color: #fff;
-    width: 700px;
+    max-width: 1128px;
+    min-width: 495px;
+    width: 100%;
     height: auto;
     border-radius: 10px;
     border: #000 solid 1px;
     margin: 100px auto;
     padding-bottom: 10px;
+}
+
+.conteudo {
+    max-width: 1128px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .nascimento {
@@ -103,8 +111,9 @@ button {
     margin: 5px;
     background-color: rgb(184, 184, 184);
 }
+
 .tela label{
-    font-size: 98px;
+    font-size: 90px;
 }
 
 .teclado {
@@ -209,5 +218,5 @@ button {
 }
 
 #conteudoTela {
-    padding-top: 20px;
+    padding-top: 30px;
 }
